@@ -1459,17 +1459,22 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="music-formats-year-by-year">Music formats (Year by Year)<a class="anchor-link" href="#music-formats-year-by-year">&#182;</a></h1>
+<p><a href="https://colab.research.google.com/github/fralfaro/Vizzu-Examples/blob/main/docs/examples/musicformats.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="music-formats-year-by-year">Music formats (Year by Year)<a class="anchor-link" href="#music-formats-year-by-year">&#182;</a></h1><blockquote><p><strong>Nota</strong>: Si deseas ejecutar este ejemplo en <a href="https://colab.research.google.com/">Google Colab</a>, primero debes ejecutar la siguiente celda para instalar las librerías necesarias:</p>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipyvizzu</span> <span class="n">pandas</span>
+</pre></div>
+</blockquote>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1484,8 +1489,40 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># Importamos la librería pandas para trabajar con datos tabulares</span>
-<span class="kn">from</span> <span class="nn">ipyvizzu</span> <span class="kn">import</span> <span class="n">Chart</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">DisplayTarget</span>  <span class="c1"># Importamos las clases necesarias de ipyvizzu</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="ch">#!pip install ipyvizzu pandas</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">#!pip install ipyvizzu pandas</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  
+<span class="kn">from</span> <span class="nn">ipyvizzu</span> <span class="kn">import</span> <span class="n">Chart</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">DisplayTarget</span> 
 
 <span class="c1"># Cargamos los datos desde un archivo CSV en un DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
@@ -1532,8 +1569,8 @@ Licensed under the Apache License, Version 2.0.
     <span class="p">}</span>
 <span class="p">)</span>
 
-<span class="c1"># Crear un objeto Chart con DisplayTarget.END (mostrar al final)</span>
-<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+<span class="c1"># Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)</span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;640px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;360px&quot;</span><span class="p">,</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">MANUAL</span><span class="p">)</span>
 
 <span class="c1"># Animamos la gráfica utilizando los datos y el estilo</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span>
@@ -1663,9 +1700,12 @@ Licensed under the Apache License, Version 2.0.
     <span class="n">Style</span><span class="p">({</span><span class="s2">&quot;plot.marker.borderWidth&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}),</span>
     <span class="n">duration</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="c1"># Finalmente, muestra la gráfica utilizando el método show()</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">import pandas as pd  # Importamos la librería pandas para trabajar con datos tabulares
-from ipyvizzu import Chart, Data, Config, Style, DisplayTarget  # Importamos las clases necesarias de ipyvizzu
+<div id="cell-2" class="clipboard-copy-txt">import pandas as pd  
+from ipyvizzu import Chart, Data, Config, Style, DisplayTarget 
 
 # Cargamos los datos desde un archivo CSV en un DataFrame
 df = pd.read_csv(
@@ -1712,8 +1752,8 @@ style = Style(
     }
 )
 
-# Crear un objeto Chart con DisplayTarget.END (mostrar al final)
-chart = Chart(display=DisplayTarget.END)
+# Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)
+chart = Chart(width="640px", height="360px",display=DisplayTarget.MANUAL)
 
 # Animamos la gráfica utilizando los datos y el estilo
 chart.animate(data, style)
@@ -1842,7 +1882,10 @@ chart.animate(
     ),
     Style({"plot.marker.borderWidth": 1}),
     duration=1,
-)</div>
+)
+
+# Finalmente, muestra la gráfica utilizando el método show()
+chart.show()</div>
     
         </div>
     </div>
@@ -1866,27 +1909,9 @@ chart.animate(
 
 
 
-<div id="33b8b23b-0c2b-442f-ab55-5c17aae63fe8" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="c03538ff-c4e1-4bcf-97fd-f1525897ff57" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('33b8b23b-0c2b-442f-ab55-5c17aae63fe8');
-if (window.IpyVizzu) { window.IpyVizzu.clearInhibitScroll(element); }
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5e1bf672-396a-4bdf-bce8-9783b7cd82eb" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5e1bf672-396a-4bdf-bce8-9783b7cd82eb');
+var element = document.getElementById('c03538ff-c4e1-4bcf-97fd-f1525897ff57');
 class IpyVizzu {
   static version = "0.16.1";
   static analytics = undefined;
@@ -2101,1950 +2126,114 @@ if (IpyVizzu.version !== window.IpyVizzu?.version) {
   window.ipyvizzu = new window.IpyVizzu();
 }
 
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="0ab009d3-8297-4b0d-a730-d8982b688bc7" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('0ab009d3-8297-4b0d-a730-d8982b688bc7');
 if (window.IpyVizzu) window.IpyVizzu.changeAnalyticsTo(true);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="dec11b52-36ba-4eaf-8f9d-127e86a48923" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('dec11b52-36ba-4eaf-8f9d-127e86a48923');
-window.ipyvizzu.createChart(element, '4a4ef33', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '800px', '480px');
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="dc3f2f74-7fed-4d05-94d7-bb14dbc2a1ab" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('dc3f2f74-7fed-4d05-94d7-bb14dbc2a1ab');
-window.ipyvizzu.animate(element, '4a4ef33', 'be8add9', 'end', false, lib => { return {"data": {"series": [{"name": "Year", "values": ["1972", "1972", "1972", "1972", "1972", "1972", "1972", "1972", "1973", "1973", "1973", "1974", "1974", "1974", "1975", "1975", "1975", "1976", "1976", "1976", "1977", "1977", "1977", "1978", "1978", "1978", "1979", "1979", "1979", "1980", "1980", "1980", "1981", "1981", "1981", "1982", "1982", "1982", "1983", "1983", "1983", "1984", "1984", "1984", "1985", "1985", "1985", "1986", "1986", "1986", "1987", "1987", "1987", "1988", "1988", "1988", "1989", "1989", "1989", "1989", "1990", "1990", "1990", "1990", "1991", "1991", "1991", "1991", "1992", "1992", "1992", "1992", "1993", "1993", "1993", "1993", "1994", "1994", "1994", "1994", "1995", "1995", "1995", "1995", "1996", "1996", "1996", "1996", "1997", "1997", "1997", "1997", "1998", "1998", "1998", "1998", "1999", "1999", "1999", "1999", "2000", "2000", "2000", "2000", "2001", "2001", "2001", "2001", "2002", "2002", "2002", "2002", "2003", "2003", "2003", "2003", "2004", "2004", "2004", "2004", "2004", "2004", "2005", "2005", "2005", "2005", "2005", "2005", "2005", "2006", "2006", "2006", "2006", "2006", "2006", "2006", "2007", "2007", "2007", "2007", "2007", "2007", "2007", "2008", "2008", "2008", "2008", "2008", "2008", "2008", "2009", "2009", "2009", "2009", "2009", "2009", "2010", "2010", "2010", "2010", "2010", "2010", "2011", "2011", "2011", "2011", "2011", "2011", "2012", "2012", "2012", "2012", "2012", "2012", "2013", "2013", "2013", "2013", "2013", "2013", "2014", "2014", "2014", "2014", "2014", "2014", "2015", "2015", "2015", "2015", "2015", "2015", "2016", "2016", "2016", "2016", "2016", "2016", "2017", "2017", "2017", "2017", "2017", "2017", "2018", "2018", "2018", "2018", "2018", "2018", "2019", "2019", "2019", "2019", "2019", "2019", "2020", "2020", "2020", "2020", "2020", "2020"], "type": "dimension"}, {"name": "Format", "values": ["Other", "DVD", "Tapes", "Download", "Streaming", "Cassette", "Vinyl", "CD", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Tapes", "Cassette", "Vinyl", "Tapes", "Cassette", "Vinyl", "Tapes", "Cassette", "Vinyl", "CD", "Cassette", "Vinyl", "CD", "Vinyl", "Cassette", "CD", "Vinyl", "Cassette", "CD", "Vinyl", "Cassette", "Vinyl", "CD", "Cassette", "Vinyl", "CD", "Cassette", "DVD", "Vinyl", "CD", "Cassette", "DVD", "Vinyl", "CD", "Cassette", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "Cassette", "DVD", "CD", "Vinyl", "Cassette", "DVD", "CD", "Streaming", "Cassette", "Vinyl", "Download", "DVD", "CD", "Cassette", "Vinyl", "Streaming", "Other", "Download", "DVD", "CD", "Cassette", "Vinyl", "Streaming", "DVD", "Other", "Download", "CD", "Cassette", "Vinyl", "Streaming", "DVD", "Other", "Download", "CD", "Cassette", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Other", "Streaming", "Download", "CD", "DVD", "Vinyl", "Other", "Streaming", "CD", "Download", "DVD", "Vinyl", "Other", "Streaming", "CD", "Download", "DVD", "Vinyl", "Other", "CD", "Streaming", "Download", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "CD", "Vinyl", "Download", "Streaming"], "type": "dimension"}, {"name": "Revenue [m$]", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 443.0, 2941.0, 8371.0, 458.0, 2953.0, 8137.0, 475.0, 2854.0, 8161.0, 663.0, 3108.0, 8679.0, 1066.0, 3464.0, 10422.0, 1786.0, 3763.0, 10851.0, 2070.0, 2440.0, 8594.0, 1655.0, 2214.0, 7695.0, 891.0, 3026.0, 7397.0, 97.0, 3713.0, 5922.0, 45.0, 4706.0, 5089.0, 257.0, 4602.0, 5938.0, 937.0, 3756.0, 5800.0, 2196.0, 2860.0, 5902.0, 2270.0, 3631.0, 6776.0, 1559.0, 4594.0, 7531.0, 241.0, 703.0, 5401.0, 7390.0, 341.0, 358.0, 6847.0, 7387.0, 177.0, 224.0, 6176.0, 8309.0, 147.0, 290.0, 6300.0, 9909.0, 111.0, 382.0, 5757.0, 11745.0, 114.0, 404.0, 5678.0, 14880.0, 122.0, 374.0, 4313.0, 16113.0, 139.0, 390.0, 3455.0, 16691.0, 111.0, 522.0, 2671.0, 16428.0, 95.0, 807.0, 2404.0, 18465.0, 93.0, 585.0, 1724.0, 20256.0, 81.0, 424.0, 948.0, 20075.0, 86.0, 490.0, 531.0, 18982.0, 65.0, 302.0, 427.0, 17355.0, 61.0, 152.0, 574.0, 15888.0, 10.0, 33.0, 54.0, 251.0, 841.0, 15726.0, 17.0, 36.0, 225.0, 560.0, 666.0, 813.0, 13969.0, 5.0, 33.0, 307.0, 582.0, 996.0, 1125.0, 12049.0, 4.0, 34.0, 337.0, 609.0, 1321.0, 1669.0, 9324.0, 1.0, 72.0, 275.0, 386.0, 1178.0, 2054.0, 6585.0, 80.0, 255.0, 436.0, 1098.0, 2361.0, 5217.0, 108.0, 212.0, 548.0, 763.0, 2665.0, 4028.0, 143.0, 174.0, 547.0, 752.0, 3021.0, 3573.0, 132.0, 187.0, 384.0, 1164.0, 2807.0, 3236.0, 118.0, 237.0, 327.0, 1616.0, 2382.0, 3136.0, 100.0, 273.0, 283.0, 1947.0, 1998.0, 2719.0, 83.0, 285.0, 370.0, 1580.0, 2464.0, 2546.0, 64.0, 296.0, 389.0, 1221.0, 1930.0, 4179.0, 40.0, 285.0, 417.0, 1103.0, 1412.0, 5721.0, 30.0, 322.0, 438.0, 718.0, 1038.0, 7491.0, 28.0, 307.0, 492.0, 639.0, 810.0, 8992.0, 29.0, 287.0, 484.0, 626.0, 653.0, 10075.0], "type": "measure"}]}, "style": {"plot": {"paddingLeft": 100, "paddingTop": 25, "yAxis": {"color": "#ffffff00", "label": {"paddingRight": 10}}, "xAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00", "numberFormat": "grouped"}}, "marker": {"colorPalette": "#b74c20FF #c47f58FF #1c9761FF #ea4549FF #875792FF #3562b6FF #ee7c34FF #efae3aFF"}}}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="4d7b863b-d19d-422d-bfa9-52bbb508f5ef" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('4d7b863b-d19d-422d-bfa9-52bbb508f5ef');
-window.ipyvizzu.animate(element, '4a4ef33', '5a20df8', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1973) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1973"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="33556d9d-0a55-46ad-aefe-283fda9880a1" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('33556d9d-0a55-46ad-aefe-283fda9880a1');
-window.ipyvizzu.animate(element, '4a4ef33', '127bfb7', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1974) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1974"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b9265143-f8f2-4107-9348-4133f8f85982" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b9265143-f8f2-4107-9348-4133f8f85982');
-window.ipyvizzu.animate(element, '4a4ef33', '20bd12f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1975) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1975"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="6f698304-0214-4e86-aacc-5a88ae7d58da" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('6f698304-0214-4e86-aacc-5a88ae7d58da');
-window.ipyvizzu.animate(element, '4a4ef33', '386cc30', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1976) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1976"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="f1874540-b80d-4f34-b7fd-398595424558" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('f1874540-b80d-4f34-b7fd-398595424558');
-window.ipyvizzu.animate(element, '4a4ef33', '31861fd', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1977) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1977"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="38e1c8f0-3a20-455b-815e-936447b82ac0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('38e1c8f0-3a20-455b-815e-936447b82ac0');
-window.ipyvizzu.animate(element, '4a4ef33', '307a97d', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1978) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1978"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="417f30e2-1a3b-4117-8631-e2b4a1fc550a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('417f30e2-1a3b-4117-8631-e2b4a1fc550a');
-window.ipyvizzu.animate(element, '4a4ef33', '1a97f3e', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1979) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1979"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="dad5f5e8-e019-44b3-b269-71b9ac56dd98" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('dad5f5e8-e019-44b3-b269-71b9ac56dd98');
-window.ipyvizzu.animate(element, '4a4ef33', '88fdf13', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1980) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1980"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9b343185-122b-43bf-957f-e63090f22e7f" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9b343185-122b-43bf-957f-e63090f22e7f');
-window.ipyvizzu.animate(element, '4a4ef33', 'e30ba3d', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1981) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1981"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="47c64bc9-0992-4fb2-83c6-31e3f46fa2c2" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('47c64bc9-0992-4fb2-83c6-31e3f46fa2c2');
-window.ipyvizzu.animate(element, '4a4ef33', 'd5a50f0', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1982) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1982"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="71806afa-6d89-453c-a0dd-de96bcead5c9" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('71806afa-6d89-453c-a0dd-de96bcead5c9');
-window.ipyvizzu.animate(element, '4a4ef33', '05ff7f9', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1983) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1983"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b9c86e5b-63e2-46a6-8d4f-e7a534265b02" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b9c86e5b-63e2-46a6-8d4f-e7a534265b02');
-window.ipyvizzu.animate(element, '4a4ef33', '3a3ff4c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1984) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1984"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="f2f00d54-8df1-413c-aff5-3325a65cc5aa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('f2f00d54-8df1-413c-aff5-3325a65cc5aa');
-window.ipyvizzu.animate(element, '4a4ef33', '170fd06', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1985) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1985"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="f82d6f02-4661-40c5-ac52-d8eaf1e236cc" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('f82d6f02-4661-40c5-ac52-d8eaf1e236cc');
-window.ipyvizzu.animate(element, '4a4ef33', '99885d1', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1986) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1986"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5c9b3ce8-1307-4ab2-bdab-585f4d0ad82a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5c9b3ce8-1307-4ab2-bdab-585f4d0ad82a');
-window.ipyvizzu.animate(element, '4a4ef33', '2fed83f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1987) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1987"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9fa80d5a-6d77-4de2-9301-c8d74a7fb527" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9fa80d5a-6d77-4de2-9301-c8d74a7fb527');
-window.ipyvizzu.animate(element, '4a4ef33', 'c617010', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1988) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1988"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7c01c96a-bf12-4585-bee6-063068c1a146" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7c01c96a-bf12-4585-bee6-063068c1a146');
-window.ipyvizzu.animate(element, '4a4ef33', '93ad37a', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1989) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1989"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ee95473c-63c0-4cb3-9c6c-a0e3679d236a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ee95473c-63c0-4cb3-9c6c-a0e3679d236a');
-window.ipyvizzu.animate(element, '4a4ef33', '8b12f57', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1990) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1990"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="c0def5d9-23ff-4c65-9f36-842e40d4fc2d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('c0def5d9-23ff-4c65-9f36-842e40d4fc2d');
-window.ipyvizzu.animate(element, '4a4ef33', 'f361002', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1991) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1991"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="f5479bfe-2c63-4687-b160-7dea0f4fd5da" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('f5479bfe-2c63-4687-b160-7dea0f4fd5da');
-window.ipyvizzu.animate(element, '4a4ef33', 'a1e9561', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1992) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1992"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5e3387ce-1386-4b71-93ad-5cf2f85828ee" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5e3387ce-1386-4b71-93ad-5cf2f85828ee');
-window.ipyvizzu.animate(element, '4a4ef33', '1a86133', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1993) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1993"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="95973e49-884d-4698-a1f8-bcd0f41271f6" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('95973e49-884d-4698-a1f8-bcd0f41271f6');
-window.ipyvizzu.animate(element, '4a4ef33', 'aea1211', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1994) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1994"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="13255a80-a6c0-4b9f-bbb5-395efcf5e29a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('13255a80-a6c0-4b9f-bbb5-395efcf5e29a');
-window.ipyvizzu.animate(element, '4a4ef33', '9f3f039', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1995) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1995"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="a24ad2cd-2ca8-490f-97e8-006cdb20f41e" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('a24ad2cd-2ca8-490f-97e8-006cdb20f41e');
-window.ipyvizzu.animate(element, '4a4ef33', '29584f0', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1996) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1996"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="36e0aaed-6ae4-40df-9736-0105f32f36dc" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('36e0aaed-6ae4-40df-9736-0105f32f36dc');
-window.ipyvizzu.animate(element, '4a4ef33', 'f38f671', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1997) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1997"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="cee4ae11-b0c4-4d23-9fdf-9eaa6687e1fb" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('cee4ae11-b0c4-4d23-9fdf-9eaa6687e1fb');
-window.ipyvizzu.animate(element, '4a4ef33', '8c6c41b', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1998) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1998"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7af49652-c77a-401b-92db-8d45a35b5abf" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7af49652-c77a-401b-92db-8d45a35b5abf');
-window.ipyvizzu.animate(element, '4a4ef33', '44f5cc2', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1999) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1999"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1fe3b770-1382-45cb-b701-c32f9d492f30" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1fe3b770-1382-45cb-b701-c32f9d492f30');
-window.ipyvizzu.animate(element, '4a4ef33', 'ff2771d', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2000) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2000"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7516d579-b186-4102-8a2d-dc886a4195f0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7516d579-b186-4102-8a2d-dc886a4195f0');
-window.ipyvizzu.animate(element, '4a4ef33', 'b20fa93', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2001) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2001"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="328c71fb-cc8e-40de-9705-f8ec3787e827" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('328c71fb-cc8e-40de-9705-f8ec3787e827');
-window.ipyvizzu.animate(element, '4a4ef33', '6b14956', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2002) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2002"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="58c2bc3b-78a1-4653-bce7-45b6a26e0775" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('58c2bc3b-78a1-4653-bce7-45b6a26e0775');
-window.ipyvizzu.animate(element, '4a4ef33', '202e119', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2003) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2003"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="3acf0f41-7261-4952-b6f9-670648ed5f83" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('3acf0f41-7261-4952-b6f9-670648ed5f83');
-window.ipyvizzu.animate(element, '4a4ef33', 'a870050', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2004) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2004"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1fb4fbf6-6acd-4ecb-9284-3492eb7b44c6" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1fb4fbf6-6acd-4ecb-9284-3492eb7b44c6');
-window.ipyvizzu.animate(element, '4a4ef33', 'e42108b', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2005) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2005"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="c254f614-9e96-4361-98d5-8bdd13232c3b" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('c254f614-9e96-4361-98d5-8bdd13232c3b');
-window.ipyvizzu.animate(element, '4a4ef33', '4a46f75', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2006) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2006"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="6b132327-7188-4c6d-9e3d-4bc389a21eff" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('6b132327-7188-4c6d-9e3d-4bc389a21eff');
-window.ipyvizzu.animate(element, '4a4ef33', '290a60d', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2007) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2007"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="93719407-c6ba-4d40-aefe-92a7780e183f" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('93719407-c6ba-4d40-aefe-92a7780e183f');
-window.ipyvizzu.animate(element, '4a4ef33', 'b04fc0f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2008) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2008"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5cc7136e-0334-43d6-a936-844062c2a4c0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5cc7136e-0334-43d6-a936-844062c2a4c0');
-window.ipyvizzu.animate(element, '4a4ef33', '86295a8', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2009) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2009"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="fe59100a-c37e-4773-811e-5b8199fbe666" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('fe59100a-c37e-4773-811e-5b8199fbe666');
-window.ipyvizzu.animate(element, '4a4ef33', 'c10a3d1', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2010) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2010"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="23093092-7640-4700-b51b-5fd7ad2108d9" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('23093092-7640-4700-b51b-5fd7ad2108d9');
-window.ipyvizzu.animate(element, '4a4ef33', 'd25161f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2011) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2011"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="3dac75ed-0076-4a8a-8169-4f01e10dd7d6" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('3dac75ed-0076-4a8a-8169-4f01e10dd7d6');
-window.ipyvizzu.animate(element, '4a4ef33', '9f4d6da', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2012) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2012"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="39589090-5bd3-42c0-b61b-f312e06d9c57" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('39589090-5bd3-42c0-b61b-f312e06d9c57');
-window.ipyvizzu.animate(element, '4a4ef33', '3a8fd65', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2013) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2013"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="4d9e0c2e-7e35-4d73-b3ef-b094967a8f57" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('4d9e0c2e-7e35-4d73-b3ef-b094967a8f57');
-window.ipyvizzu.animate(element, '4a4ef33', '688ac3d', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2014) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2014"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7fe65529-73b5-4b9d-abf7-737634ff1482" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7fe65529-73b5-4b9d-abf7-737634ff1482');
-window.ipyvizzu.animate(element, '4a4ef33', 'ff08b95', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2015) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2015"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="0d220499-8ff3-4b20-b953-0dfb3ed2bbe8" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('0d220499-8ff3-4b20-b953-0dfb3ed2bbe8');
-window.ipyvizzu.animate(element, '4a4ef33', '548f899', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2016) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2016"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5f700ff1-68d8-49ee-9ce1-d1a4bba62c53" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5f700ff1-68d8-49ee-9ce1-d1a4bba62c53');
-window.ipyvizzu.animate(element, '4a4ef33', '74adb01', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2017) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2017"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="a49ad3ab-5433-43a3-a54f-a4d6ee621ca2" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('a49ad3ab-5433-43a3-a54f-a4d6ee621ca2');
-window.ipyvizzu.animate(element, '4a4ef33', '584812e', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2018) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2018"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="a1b7552a-e5d1-470d-b1b9-e08d7175676a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('a1b7552a-e5d1-470d-b1b9-e08d7175676a');
-window.ipyvizzu.animate(element, '4a4ef33', '8d16382', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2019) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2019"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="cc44d877-1b63-4d27-91f2-b3aaa326902c" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('cc44d877-1b63-4d27-91f2-b3aaa326902c');
-window.ipyvizzu.animate(element, '4a4ef33', 'd0f9ccb', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2020) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2020"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="74d9e20e-18b6-455c-bf44-63bc0faedec1" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('74d9e20e-18b6-455c-bf44-63bc0faedec1');
-window.ipyvizzu.animate(element, '4a4ef33', 'a4fcdb1', 'end', false, lib => { return {"config": {"channels": {"x": {"attach": ["Year"]}, "label": {"set": null}}}} }, {"duration": 0.3});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9c0bcb55-0602-4600-8ab5-1efd29500c06" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9c0bcb55-0602-4600-8ab5-1efd29500c06');
-window.ipyvizzu.animate(element, '4a4ef33', 'ef58327', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == '2020' || record.Year == '1972') }}, "config": {"title": "Veamos el total de los \u00faltimos 47 a\u00f1os"}} }, {"duration": 2});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1de777f3-2629-41f2-9631-e110e7b31ed9" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1de777f3-2629-41f2-9631-e110e7b31ed9');
-window.ipyvizzu.animate(element, '4a4ef33', '22d337b', 'end', false, lib => { return {"config": {"sort": "none"}} }, {"delay": 0, "duration": 2});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="406e2c99-f410-49f6-b3b5-d93be83fc457" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('406e2c99-f410-49f6-b3b5-d93be83fc457');
-window.ipyvizzu.animate(element, '4a4ef33', 'fe65c6b', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2019 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="eaab1e04-daba-462f-8ca8-648b1d4ec51b" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('eaab1e04-daba-462f-8ca8-648b1d4ec51b');
-window.ipyvizzu.animate(element, '4a4ef33', '0120751', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2018 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="203038c0-cfe8-484a-92d0-32a6578a083a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('203038c0-cfe8-484a-92d0-32a6578a083a');
-window.ipyvizzu.animate(element, '4a4ef33', 'b2ce155', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2017 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="e5581e44-417b-45ab-83e1-0545878b8e2e" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('e5581e44-417b-45ab-83e1-0545878b8e2e');
-window.ipyvizzu.animate(element, '4a4ef33', '4bdac60', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2016 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b7affe16-39ca-477c-b0d0-6c22221f1560" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b7affe16-39ca-477c-b0d0-6c22221f1560');
-window.ipyvizzu.animate(element, '4a4ef33', 'fe543f2', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2015 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="e00dd293-81ab-4ece-a509-9ac390a98f3b" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('e00dd293-81ab-4ece-a509-9ac390a98f3b');
-window.ipyvizzu.animate(element, '4a4ef33', '321dac9', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2014 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9d69e931-9495-4261-bf4a-ef3730831e81" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9d69e931-9495-4261-bf4a-ef3730831e81');
-window.ipyvizzu.animate(element, '4a4ef33', 'e4c62de', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2013 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="8f513e46-3e68-4805-8874-7b8c3f8d66bd" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('8f513e46-3e68-4805-8874-7b8c3f8d66bd');
-window.ipyvizzu.animate(element, '4a4ef33', '6c4f739', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2012 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1d6626ac-2500-4ab9-97c8-e3f9c6d76769" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1d6626ac-2500-4ab9-97c8-e3f9c6d76769');
-window.ipyvizzu.animate(element, '4a4ef33', 'b41c28e', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2011 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="47d3434a-8ebd-4fbc-a80b-5b9bd1723f30" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('47d3434a-8ebd-4fbc-a80b-5b9bd1723f30');
-window.ipyvizzu.animate(element, '4a4ef33', 'ed18718', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2010 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ffed8bf6-c05e-43e3-ad17-646a932a2f63" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ffed8bf6-c05e-43e3-ad17-646a932a2f63');
-window.ipyvizzu.animate(element, '4a4ef33', 'b08664c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2009 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="2277e83f-dd61-4a66-9128-8a76834ce67b" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('2277e83f-dd61-4a66-9128-8a76834ce67b');
-window.ipyvizzu.animate(element, '4a4ef33', '7154915', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2008 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="24ec33af-589e-48de-bc29-bf70badec2c7" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('24ec33af-589e-48de-bc29-bf70badec2c7');
-window.ipyvizzu.animate(element, '4a4ef33', 'deedf0c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2007 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="45e4f4ae-61e8-4d21-828b-26347ccdc64c" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('45e4f4ae-61e8-4d21-828b-26347ccdc64c');
-window.ipyvizzu.animate(element, '4a4ef33', '7e5877e', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2006 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="4ce8ee16-ea56-43e4-a09e-4b78be14e105" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('4ce8ee16-ea56-43e4-a09e-4b78be14e105');
-window.ipyvizzu.animate(element, '4a4ef33', 'f65a88f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2005 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5f5d2947-89c5-4f80-9608-c0d569b4436c" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5f5d2947-89c5-4f80-9608-c0d569b4436c');
-window.ipyvizzu.animate(element, '4a4ef33', '9e4cb7e', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2004 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="2e594c36-22a9-4e80-b176-44d09baeba12" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('2e594c36-22a9-4e80-b176-44d09baeba12');
-window.ipyvizzu.animate(element, '4a4ef33', '76f0c3b', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2003 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ebadc734-b90a-4793-ab08-f4d50d255053" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ebadc734-b90a-4793-ab08-f4d50d255053');
-window.ipyvizzu.animate(element, '4a4ef33', 'e66c595', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2002 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="2966466d-98dd-4cbc-9d74-b9cb203fcfee" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('2966466d-98dd-4cbc-9d74-b9cb203fcfee');
-window.ipyvizzu.animate(element, '4a4ef33', '153d6a1', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2001 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="fad6cdda-7e79-4bbc-924e-c5bda8fce5a7" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('fad6cdda-7e79-4bbc-924e-c5bda8fce5a7');
-window.ipyvizzu.animate(element, '4a4ef33', 'd509724', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2000 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="bc276f7b-0b77-4b73-a1d5-5774fa028abd" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('bc276f7b-0b77-4b73-a1d5-5774fa028abd');
-window.ipyvizzu.animate(element, '4a4ef33', '3f0ebe4', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1999 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="45b8e049-c7a0-42aa-8646-f243f5bb9fce" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('45b8e049-c7a0-42aa-8646-f243f5bb9fce');
-window.ipyvizzu.animate(element, '4a4ef33', 'b32b31f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1998 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="3c7526c9-ad15-4c0d-9cbe-a0d7e9c9e48d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('3c7526c9-ad15-4c0d-9cbe-a0d7e9c9e48d');
-window.ipyvizzu.animate(element, '4a4ef33', 'fdd4056', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1997 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="8a63981f-3462-4406-8147-bf1d4267e078" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('8a63981f-3462-4406-8147-bf1d4267e078');
-window.ipyvizzu.animate(element, '4a4ef33', '80f67a8', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1996 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="db8d7a88-fbe5-442a-8d34-033daaa69d94" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('db8d7a88-fbe5-442a-8d34-033daaa69d94');
-window.ipyvizzu.animate(element, '4a4ef33', '247d7f7', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1995 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="76044662-f137-464f-8b69-7d7fafb54684" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('76044662-f137-464f-8b69-7d7fafb54684');
-window.ipyvizzu.animate(element, '4a4ef33', 'ae47cb5', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1994 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="6179b4ec-dad2-480a-afab-8ba8e02c3268" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('6179b4ec-dad2-480a-afab-8ba8e02c3268');
-window.ipyvizzu.animate(element, '4a4ef33', 'fc52124', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1993 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="2c0060b2-28ef-4e55-876b-6810e2878fdd" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('2c0060b2-28ef-4e55-876b-6810e2878fdd');
-window.ipyvizzu.animate(element, '4a4ef33', 'de67337', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1992 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="6ffc8751-666e-4e29-834c-ed1479b7a01e" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('6ffc8751-666e-4e29-834c-ed1479b7a01e');
-window.ipyvizzu.animate(element, '4a4ef33', '51119d5', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1991 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="d5efa320-c829-4cd5-b745-c6dbdf3b9223" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('d5efa320-c829-4cd5-b745-c6dbdf3b9223');
-window.ipyvizzu.animate(element, '4a4ef33', '55702f0', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1990 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5557f470-686c-4f08-9009-bfc0f3a7cdc5" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5557f470-686c-4f08-9009-bfc0f3a7cdc5');
-window.ipyvizzu.animate(element, '4a4ef33', '5a5157b', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1989 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ba5f5ff3-5161-49ac-8885-8e086aa4024d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ba5f5ff3-5161-49ac-8885-8e086aa4024d');
-window.ipyvizzu.animate(element, '4a4ef33', '4840055', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1988 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="c71c396b-f60d-4f5c-86ea-b4ceccbfce1d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('c71c396b-f60d-4f5c-86ea-b4ceccbfce1d');
-window.ipyvizzu.animate(element, '4a4ef33', '114683c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1987 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="fef8e669-5cba-4ad2-b8af-3a55e186f42b" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('fef8e669-5cba-4ad2-b8af-3a55e186f42b');
-window.ipyvizzu.animate(element, '4a4ef33', '6de51ac', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1986 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="01f0161b-04b0-4aaa-99d0-d58feee58ba0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('01f0161b-04b0-4aaa-99d0-d58feee58ba0');
-window.ipyvizzu.animate(element, '4a4ef33', '4cc5d65', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1985 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b007aca8-6df7-4e3b-a06e-7ca13e70d727" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b007aca8-6df7-4e3b-a06e-7ca13e70d727');
-window.ipyvizzu.animate(element, '4a4ef33', '0a96269', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1984 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="d2e0b311-c471-41bf-8111-11dcfd21225a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('d2e0b311-c471-41bf-8111-11dcfd21225a');
-window.ipyvizzu.animate(element, '4a4ef33', '8a1776f', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1983 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="403aad79-1fae-4e41-bedd-ae3b7905bf70" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('403aad79-1fae-4e41-bedd-ae3b7905bf70');
-window.ipyvizzu.animate(element, '4a4ef33', 'e5fe0d6', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1982 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1a8be972-9a0a-47a5-97d8-54db258b460f" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1a8be972-9a0a-47a5-97d8-54db258b460f');
-window.ipyvizzu.animate(element, '4a4ef33', '28cd162', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1981 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5abdd566-0be5-4f60-8365-34f5b45c7a95" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5abdd566-0be5-4f60-8365-34f5b45c7a95');
-window.ipyvizzu.animate(element, '4a4ef33', '12eb73c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1980 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="e320dcdf-b795-412d-b8c8-1b56b940aaef" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('e320dcdf-b795-412d-b8c8-1b56b940aaef');
-window.ipyvizzu.animate(element, '4a4ef33', '7893cdc', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1979 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="279ae720-37d5-4730-94a5-69452ceaf125" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('279ae720-37d5-4730-94a5-69452ceaf125');
-window.ipyvizzu.animate(element, '4a4ef33', '27f6fbe', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1978 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="219be125-92c3-478a-ab8b-81576deeb454" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('219be125-92c3-478a-ab8b-81576deeb454');
-window.ipyvizzu.animate(element, '4a4ef33', 'd9bf5d4', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1977 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="91fdc738-55d9-48cb-9252-3efd1270f481" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('91fdc738-55d9-48cb-9252-3efd1270f481');
-window.ipyvizzu.animate(element, '4a4ef33', '0cc36e0', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1976 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="8f2c4bba-2526-4bc8-9055-8c9ebc4b9bcc" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('8f2c4bba-2526-4bc8-9055-8c9ebc4b9bcc');
-window.ipyvizzu.animate(element, '4a4ef33', 'bfc87c4', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1975 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="97d387b0-73eb-4241-8019-9cf1f396d6fa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('97d387b0-73eb-4241-8019-9cf1f396d6fa');
-window.ipyvizzu.animate(element, '4a4ef33', '938fd80', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1974 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ee6b24a2-cead-4282-b068-afddf99e54bd" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ee6b24a2-cead-4282-b068-afddf99e54bd');
-window.ipyvizzu.animate(element, '4a4ef33', 'a46987c', 'end', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1973 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="32fe3aed-b4eb-47f1-bc5b-3bb2cf07a3bf" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('32fe3aed-b4eb-47f1-bc5b-3bb2cf07a3bf');
-window.ipyvizzu.animate(element, '4a4ef33', 'b913016', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year != '1972') }}, "config": {"split": false}} }, {"duration": 1.5});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9afef012-1871-4974-af08-2e9dcbb4aaab" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9afef012-1871-4974-af08-2e9dcbb4aaab');
-window.ipyvizzu.animate(element, '4a4ef33', '810ebdb', 'end', false, lib => { return {"config": {"channels": {"x": {"detach": ["Year"]}}}} }, {"duration": 0});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="d777c648-e60f-4afb-9582-39f786de58b0" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('d777c648-e60f-4afb-9582-39f786de58b0');
-window.ipyvizzu.animate(element, '4a4ef33', '3e7e295', 'end', false, lib => { return {"config": {"channels": {"label": {"set": ["Revenue [m$]"]}}}} }, {"duration": 0.1});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="585d6c5b-11c3-471d-83fd-41e5cffc7157" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('585d6c5b-11c3-471d-83fd-41e5cffc7157');
-window.ipyvizzu.animate(element, '4a4ef33', 'fbe4b41', 'end', false, lib => { return {"config": {"channels": {"x": {"attach": ["Year"]}, "label": {"detach": ["Revenue [m$]"]}}}} }, {"duration": 1});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="a290f65c-5dd3-4dee-b4f1-503995a9d5f2" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('a290f65c-5dd3-4dee-b4f1-503995a9d5f2');
-window.ipyvizzu.animate(element, '4a4ef33', '4681834', 'end', false, lib => { return {"config": {"channels": {"x": {"set": ["Year"]}, "y": {"set": ["Revenue [m$]", "Format"], "range": {"min": null, "max": null}}, "color": {"set": ["Format"]}}, "title": "Ingresos de la M\u00fasica por Formato en los EE. UU. 1973 - 2020", "split": true}, "style": {"plot": {"paddingLeft": 7.5, "paddingTop": 25, "xAxis": {"label": {"fontSize": 9, "angle": 2.0, "color": "#8e8e8e"}}, "yAxis": {"interlacing": {"color": "#ffffff00"}, "title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00"}}}}} }, {"duration": 2});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b935c061-1701-4be7-bcf8-c872d952a73d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b935c061-1701-4be7-bcf8-c872d952a73d');
-window.ipyvizzu.animate(element, '4a4ef33', 'deafc57', 'end', false, lib => { return {"config": {"geometry": "area"}} }, {"duration": 1});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="354880ae-2f1a-4611-8c66-408eca934cb3" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('354880ae-2f1a-4611-8c66-408eca934cb3');
-window.ipyvizzu.animate(element, '4a4ef33', 'fb945f7', 'end', false, lib => { return {"config": {"channels": {"x": {"set": ["Year"]}, "y": {"range": {"max": "110%"}}}, "align": "center", "split": false}, "style": {"plot.marker.borderWidth": 1}} }, {"duration": 1});
+window.ipyvizzu.createChart(element, '89d4dff', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '640px', '360px');
+window.ipyvizzu.animate(element, '89d4dff', '16beeda', 'manual', false, lib => { return {"data": {"series": [{"name": "Year", "values": ["1972", "1972", "1972", "1972", "1972", "1972", "1972", "1972", "1973", "1973", "1973", "1974", "1974", "1974", "1975", "1975", "1975", "1976", "1976", "1976", "1977", "1977", "1977", "1978", "1978", "1978", "1979", "1979", "1979", "1980", "1980", "1980", "1981", "1981", "1981", "1982", "1982", "1982", "1983", "1983", "1983", "1984", "1984", "1984", "1985", "1985", "1985", "1986", "1986", "1986", "1987", "1987", "1987", "1988", "1988", "1988", "1989", "1989", "1989", "1989", "1990", "1990", "1990", "1990", "1991", "1991", "1991", "1991", "1992", "1992", "1992", "1992", "1993", "1993", "1993", "1993", "1994", "1994", "1994", "1994", "1995", "1995", "1995", "1995", "1996", "1996", "1996", "1996", "1997", "1997", "1997", "1997", "1998", "1998", "1998", "1998", "1999", "1999", "1999", "1999", "2000", "2000", "2000", "2000", "2001", "2001", "2001", "2001", "2002", "2002", "2002", "2002", "2003", "2003", "2003", "2003", "2004", "2004", "2004", "2004", "2004", "2004", "2005", "2005", "2005", "2005", "2005", "2005", "2005", "2006", "2006", "2006", "2006", "2006", "2006", "2006", "2007", "2007", "2007", "2007", "2007", "2007", "2007", "2008", "2008", "2008", "2008", "2008", "2008", "2008", "2009", "2009", "2009", "2009", "2009", "2009", "2010", "2010", "2010", "2010", "2010", "2010", "2011", "2011", "2011", "2011", "2011", "2011", "2012", "2012", "2012", "2012", "2012", "2012", "2013", "2013", "2013", "2013", "2013", "2013", "2014", "2014", "2014", "2014", "2014", "2014", "2015", "2015", "2015", "2015", "2015", "2015", "2016", "2016", "2016", "2016", "2016", "2016", "2017", "2017", "2017", "2017", "2017", "2017", "2018", "2018", "2018", "2018", "2018", "2018", "2019", "2019", "2019", "2019", "2019", "2019", "2020", "2020", "2020", "2020", "2020", "2020"], "type": "dimension"}, {"name": "Format", "values": ["Other", "DVD", "Tapes", "Download", "Streaming", "Cassette", "Vinyl", "CD", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Cassette", "Tapes", "Vinyl", "Tapes", "Cassette", "Vinyl", "Tapes", "Cassette", "Vinyl", "Tapes", "Cassette", "Vinyl", "CD", "Cassette", "Vinyl", "CD", "Vinyl", "Cassette", "CD", "Vinyl", "Cassette", "CD", "Vinyl", "Cassette", "Vinyl", "CD", "Cassette", "Vinyl", "CD", "Cassette", "DVD", "Vinyl", "CD", "Cassette", "DVD", "Vinyl", "CD", "Cassette", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "DVD", "Cassette", "CD", "Vinyl", "Cassette", "DVD", "CD", "Vinyl", "Cassette", "DVD", "CD", "Streaming", "Cassette", "Vinyl", "Download", "DVD", "CD", "Cassette", "Vinyl", "Streaming", "Other", "Download", "DVD", "CD", "Cassette", "Vinyl", "Streaming", "DVD", "Other", "Download", "CD", "Cassette", "Vinyl", "Streaming", "DVD", "Other", "Download", "CD", "Cassette", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Streaming", "Other", "Download", "CD", "Vinyl", "DVD", "Other", "Streaming", "Download", "CD", "DVD", "Vinyl", "Other", "Streaming", "CD", "Download", "DVD", "Vinyl", "Other", "Streaming", "CD", "Download", "DVD", "Vinyl", "Other", "CD", "Streaming", "Download", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "Vinyl", "CD", "Download", "Streaming", "DVD", "Other", "CD", "Vinyl", "Download", "Streaming"], "type": "dimension"}, {"name": "Revenue [m$]", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 443.0, 2941.0, 8371.0, 458.0, 2953.0, 8137.0, 475.0, 2854.0, 8161.0, 663.0, 3108.0, 8679.0, 1066.0, 3464.0, 10422.0, 1786.0, 3763.0, 10851.0, 2070.0, 2440.0, 8594.0, 1655.0, 2214.0, 7695.0, 891.0, 3026.0, 7397.0, 97.0, 3713.0, 5922.0, 45.0, 4706.0, 5089.0, 257.0, 4602.0, 5938.0, 937.0, 3756.0, 5800.0, 2196.0, 2860.0, 5902.0, 2270.0, 3631.0, 6776.0, 1559.0, 4594.0, 7531.0, 241.0, 703.0, 5401.0, 7390.0, 341.0, 358.0, 6847.0, 7387.0, 177.0, 224.0, 6176.0, 8309.0, 147.0, 290.0, 6300.0, 9909.0, 111.0, 382.0, 5757.0, 11745.0, 114.0, 404.0, 5678.0, 14880.0, 122.0, 374.0, 4313.0, 16113.0, 139.0, 390.0, 3455.0, 16691.0, 111.0, 522.0, 2671.0, 16428.0, 95.0, 807.0, 2404.0, 18465.0, 93.0, 585.0, 1724.0, 20256.0, 81.0, 424.0, 948.0, 20075.0, 86.0, 490.0, 531.0, 18982.0, 65.0, 302.0, 427.0, 17355.0, 61.0, 152.0, 574.0, 15888.0, 10.0, 33.0, 54.0, 251.0, 841.0, 15726.0, 17.0, 36.0, 225.0, 560.0, 666.0, 813.0, 13969.0, 5.0, 33.0, 307.0, 582.0, 996.0, 1125.0, 12049.0, 4.0, 34.0, 337.0, 609.0, 1321.0, 1669.0, 9324.0, 1.0, 72.0, 275.0, 386.0, 1178.0, 2054.0, 6585.0, 80.0, 255.0, 436.0, 1098.0, 2361.0, 5217.0, 108.0, 212.0, 548.0, 763.0, 2665.0, 4028.0, 143.0, 174.0, 547.0, 752.0, 3021.0, 3573.0, 132.0, 187.0, 384.0, 1164.0, 2807.0, 3236.0, 118.0, 237.0, 327.0, 1616.0, 2382.0, 3136.0, 100.0, 273.0, 283.0, 1947.0, 1998.0, 2719.0, 83.0, 285.0, 370.0, 1580.0, 2464.0, 2546.0, 64.0, 296.0, 389.0, 1221.0, 1930.0, 4179.0, 40.0, 285.0, 417.0, 1103.0, 1412.0, 5721.0, 30.0, 322.0, 438.0, 718.0, 1038.0, 7491.0, 28.0, 307.0, 492.0, 639.0, 810.0, 8992.0, 29.0, 287.0, 484.0, 626.0, 653.0, 10075.0], "type": "measure"}]}, "style": {"plot": {"paddingLeft": 100, "paddingTop": 25, "yAxis": {"color": "#ffffff00", "label": {"paddingRight": 10}}, "xAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00", "numberFormat": "grouped"}}, "marker": {"colorPalette": "#b74c20FF #c47f58FF #1c9761FF #ea4549FF #875792FF #3562b6FF #ee7c34FF #efae3aFF"}}}} }, undefined);
+window.ipyvizzu.animate(element, '89d4dff', '57128fa', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1973) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1973"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'abe47b0', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1974) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1974"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'b73404c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1975) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1975"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '4f8ecca', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1976) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1976"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '81660a2', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1977) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1977"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '7c4f0f1', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1978) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1978"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '7e1f595', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1979) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1979"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'b309d52', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1980) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1980"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '3b38061', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1981) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1981"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '1c82cd6', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1982) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1982"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '27315cc', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1983) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1983"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'd830671', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1984) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1984"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '393e17e', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1985) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1985"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'a641f24', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1986) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1986"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'bbed9a2', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1987) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1987"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '1e0bb26', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1988) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1988"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '0717a63', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1989) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1989"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'e9880c6', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1990) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1990"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '6e099d4', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1991) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1991"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '2faf7a9', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1992) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1992"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'cdf8473', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1993) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1993"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'd9c21b8', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1994) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1994"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '6dd55cc', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1995) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1995"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'f85e082', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1996) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1996"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'e75ad9c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1997) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1997"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'd285cda', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1998) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1998"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '575c7e5', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 1999) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 1999"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '003a202', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2000) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2000"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '9deb3ab', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2001) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2001"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '545ebf3', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2002) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2002"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'ffa9a6a', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2003) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2003"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'a4282a9', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2004) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2004"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'e45ba02', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2005) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2005"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '3bfe136', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2006) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2006"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'b318efe', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2007) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2007"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '8390e90', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2008) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2008"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '39c8534', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2009) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2009"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'cf068a9', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2010) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2010"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '919243c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2011) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2011"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '18b87c3', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2012) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2012"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '9821668', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2013) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2013"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'f54f4b4', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2014) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2014"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'deb327f', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2015) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2015"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '07bf388', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2016) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2016"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'eb5891c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2017) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2017"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', 'a9aab75', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2018) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2018"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '12c3b9d', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2019) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2019"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '9810677', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) == 2020) }}, "config": {"channels": {"y": {"set": ["Format"]}, "x": {"set": ["Revenue [m$]"]}, "label": {"set": ["Revenue [m$]"]}, "color": {"set": ["Format"]}}, "sort": "byValue", "title": "Ingresos de la M\u00fasica por Formato - A\u00f1o a A\u00f1o 2020"}} }, {"duration": 0.2, "x": {"easing": "linear", "delay": 0}, "y": {"delay": 0}, "show": {"delay": 0}, "hide": {"delay": 0}, "title": {"duration": 0, "delay": 0}});
+window.ipyvizzu.animate(element, '89d4dff', '7f29ac4', 'manual', false, lib => { return {"config": {"channels": {"x": {"attach": ["Year"]}, "label": {"set": null}}}} }, {"duration": 0.3});
+window.ipyvizzu.animate(element, '89d4dff', 'aaeca1d', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == '2020' || record.Year == '1972') }}, "config": {"title": "Veamos el total de los \u00faltimos 47 a\u00f1os"}} }, {"duration": 2});
+window.ipyvizzu.animate(element, '89d4dff', 'a6200f6', 'manual', false, lib => { return {"config": {"sort": "none"}} }, {"delay": 0, "duration": 2});
+window.ipyvizzu.animate(element, '89d4dff', 'a902dcd', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2019 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '912adea', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2018 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'fb79d9e', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2017 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'f314015', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2016 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '53a923f', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2015 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'cedccd6', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2014 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'e8b7aa8', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2013 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'ef3d893', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2012 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '435d1fb', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2011 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '9661133', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2010 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '3a2cadf', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2009 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '13a4956', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2008 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'e4b3135', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2007 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '47675e1', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2006 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'd573bef', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2005 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'b0be149', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2004 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '2c57a63', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2003 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '95a8fa5', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2002 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'a94ee61', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2001 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '918f9e0', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 2000 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'c4a47d3', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1999 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '209b8ad', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1998 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'a25151f', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1997 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'beafe9b', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1996 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'ea7c41a', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1995 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'ed84af2', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1994 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '5776742', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1993 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '015f2dc', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1992 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '5c5978e', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1991 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '1a56951', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1990 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '0bf29a6', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1989 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'fdf2287', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1988 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '15bf77a', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1987 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '606aff1', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1986 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'b13c469', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1985 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '5b717d5', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1984 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'e998bd1', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1983 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'd88c74c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1982 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'ac35d08', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1981 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'f9f3fd2', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1980 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '1dedc86', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1979 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'afd9704', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1978 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'ce40f1f', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1977 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'e0a0a10', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1976 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', '7a55578', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1975 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'bb7920f', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1974 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'edd0e5c', 'manual', false, lib => { return {"data": {"filter": record => { return (parseInt(record.Year) >= 1973 || record.Year == '1972') }}, "config": {"split": true}, "style": {"plot.xAxis.interlacing.color": "#ffffff"}} }, {"duration": 0.005});
+window.ipyvizzu.animate(element, '89d4dff', 'b93c2cc', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year != '1972') }}, "config": {"split": false}} }, {"duration": 1.5});
+window.ipyvizzu.animate(element, '89d4dff', 'a474ff6', 'manual', false, lib => { return {"config": {"channels": {"x": {"detach": ["Year"]}}}} }, {"duration": 0});
+window.ipyvizzu.animate(element, '89d4dff', 'd4dd795', 'manual', false, lib => { return {"config": {"channels": {"label": {"set": ["Revenue [m$]"]}}}} }, {"duration": 0.1});
+window.ipyvizzu.animate(element, '89d4dff', 'f57cd2a', 'manual', false, lib => { return {"config": {"channels": {"x": {"attach": ["Year"]}, "label": {"detach": ["Revenue [m$]"]}}}} }, {"duration": 1});
+window.ipyvizzu.animate(element, '89d4dff', 'f329d32', 'manual', false, lib => { return {"config": {"channels": {"x": {"set": ["Year"]}, "y": {"set": ["Revenue [m$]", "Format"], "range": {"min": null, "max": null}}, "color": {"set": ["Format"]}}, "title": "Ingresos de la M\u00fasica por Formato en los EE. UU. 1973 - 2020", "split": true}, "style": {"plot": {"paddingLeft": 7.5, "paddingTop": 25, "xAxis": {"label": {"fontSize": 9, "angle": 2.0, "color": "#8e8e8e"}}, "yAxis": {"interlacing": {"color": "#ffffff00"}, "title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00"}}}}} }, {"duration": 2});
+window.ipyvizzu.animate(element, '89d4dff', '8bdc475', 'manual', false, lib => { return {"config": {"geometry": "area"}} }, {"duration": 1});
+window.ipyvizzu.animate(element, '89d4dff', '2956cb1', 'manual', false, lib => { return {"config": {"channels": {"x": {"set": ["Year"]}, "y": {"range": {"max": "110%"}}}, "align": "center", "split": false}, "style": {"plot.marker.borderWidth": 1}} }, {"duration": 1});
 </script>
 </div>
 

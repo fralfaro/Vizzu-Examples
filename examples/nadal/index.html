@@ -1459,12 +1459,17 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="rafael-nadals-matches">Rafael Nadal's matches<a class="anchor-link" href="#rafael-nadals-matches">&#182;</a></h1>
+<p><a href="https://colab.research.google.com/github/fralfaro/Vizzu-Examples/blob/main/docs/examples/nadal.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="rafael-nadals-matches">Rafael Nadal's matches<a class="anchor-link" href="#rafael-nadals-matches">&#182;</a></h1><blockquote><p><strong>Nota</strong>: Si deseas ejecutar este ejemplo en <a href="https://colab.research.google.com/">Google Colab</a>, primero debes ejecutar la siguiente celda para instalar las librerías necesarias:</p>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipyvizzu</span> <span class="n">pandas</span>
+</pre></div>
+</blockquote>
+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1484,8 +1489,40 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># Importamos la librería pandas para trabajar con datos tabulares</span>
-<span class="kn">from</span> <span class="nn">ipyvizzu</span> <span class="kn">import</span> <span class="n">Chart</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">DisplayTarget</span>  <span class="c1"># Importamos las clases necesarias de ipyvizzu</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="ch">#!pip install ipyvizzu pandas</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">#!pip install ipyvizzu pandas</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  
+<span class="kn">from</span> <span class="nn">ipyvizzu</span> <span class="kn">import</span> <span class="n">Chart</span><span class="p">,</span> <span class="n">Data</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">Style</span><span class="p">,</span> <span class="n">DisplayTarget</span>  
 
 <span class="c1"># Cargamos los datos desde un archivo CSV en un DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
@@ -1504,7 +1541,8 @@ Licensed under the Apache License, Version 2.0.
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">()</span>  <span class="c1"># Creamos un objeto Data para manejar los datos</span>
 <span class="n">data</span><span class="o">.</span><span class="n">add_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>  <span class="c1"># Agregamos el DataFrame al objeto Data</span>
 
-<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>  <span class="c1"># Creamos un objeto Chart con DisplayTarget.END</span>
+<span class="c1"># Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)</span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;640px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;360px&quot;</span><span class="p">,</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">MANUAL</span><span class="p">)</span>
 
 <span class="n">chart</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Animamos la gráfica utilizando los datos</span>
 
@@ -1756,9 +1794,12 @@ Licensed under the Apache License, Version 2.0.
         <span class="p">}</span>
     <span class="p">),</span>
 <span class="p">)</span>
+
+<span class="c1"># Finalmente, muestra la gráfica utilizando el método show()</span>
+<span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div id="cell-1" class="clipboard-copy-txt">import pandas as pd  # Importamos la librería pandas para trabajar con datos tabulares
-from ipyvizzu import Chart, Data, Config, Style, DisplayTarget  # Importamos las clases necesarias de ipyvizzu
+<div id="cell-2" class="clipboard-copy-txt">import pandas as pd  
+from ipyvizzu import Chart, Data, Config, Style, DisplayTarget  
 
 # Cargamos los datos desde un archivo CSV en un DataFrame
 df = pd.read_csv(
@@ -1777,7 +1818,8 @@ df = pd.read_csv(
 data = Data()  # Creamos un objeto Data para manejar los datos
 data.add_df(df)  # Agregamos el DataFrame al objeto Data
 
-chart = Chart(display=DisplayTarget.END)  # Creamos un objeto Chart con DisplayTarget.END
+# Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)
+chart = Chart(width="640px", height="360px",display=DisplayTarget.MANUAL)
 
 chart.animate(data)  # Animamos la gráfica utilizando los datos
 
@@ -2029,7 +2071,9 @@ chart.animate(
         }
     ),
 )
-</div>
+
+# Finalmente, muestra la gráfica utilizando el método show()
+chart.show()</div>
     
         </div>
     </div>
@@ -2053,9 +2097,9 @@ chart.animate(
 
 
 
-<div id="cdaf7b8f-1503-46de-b21d-60ab72cda0f6" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="c41647d9-1aad-4a90-94b8-4906e778ce4e" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('cdaf7b8f-1503-46de-b21d-60ab72cda0f6');
+var element = document.getElementById('c41647d9-1aad-4a90-94b8-4906e778ce4e');
 class IpyVizzu {
   static version = "0.16.1";
   static analytics = undefined;
@@ -2270,402 +2314,28 @@ if (IpyVizzu.version !== window.IpyVizzu?.version) {
   window.ipyvizzu = new window.IpyVizzu();
 }
 
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="8899b8d1-a37f-4cdf-a7b3-06f29f4ca45d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('8899b8d1-a37f-4cdf-a7b3-06f29f4ca45d');
 if (window.IpyVizzu) window.IpyVizzu.changeAnalyticsTo(true);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="5510a674-2c71-4f73-bfb1-48664aefe9d6" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('5510a674-2c71-4f73-bfb1-48664aefe9d6');
-window.ipyvizzu.createChart(element, '361bbca', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '800px', '480px');
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="3c9f1e52-f5f6-4e20-b9e4-3a1deb0212c7" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('3c9f1e52-f5f6-4e20-b9e4-3a1deb0212c7');
-window.ipyvizzu.animate(element, '361bbca', 'ca48383', 'end', false, lib => { return {"data": {"series": [{"name": "Year", "values": ["2005", "2005", "2005", "2005", "2005", "2005", "2005", "2006", "2006", "2006", "2006", "2006", "2006", "2006", "2007", "2007", "2007", "2007", "2007", "2007", "2007", "2008", "2008", "2008", "2008", "2008", "2008", "2008", "2009", "2009", "2009", "2010", "2010", "2010", "2010", "2010", "2010", "2010", "2011", "2011", "2011", "2011", "2011", "2011", "2011", "2012", "2012", "2012", "2012", "2012", "2012", "2012", "2013", "2013", "2013", "2013", "2013", "2013", "2013", "2014", "2014", "2014", "2014", "2014", "2014", "2014", "2015", "2015", "2015", "2015", "2016", "2016", "2017", "2017", "2017", "2017", "2017", "2017", "2017", "2018", "2018", "2018", "2018", "2018", "2018", "2018", "2019", "2019", "2019", "2019", "2019", "2019", "2019", "2020", "2020", "2020", "2020", "2020", "2020", "2020", "2021", "2021", "2021", "2021", "2021", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2021", "2015", "2009", "2016", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total"], "type": "dimension"}, {"name": "Result", "values": ["Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Lost", "Lost", "Lost", "Retired", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won"], "type": "dimension"}, {"name": "Result_Num", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], "type": "measure"}, {"name": "Round", "values": ["R128", "R64", "R32", "R16", "QF", "SF", "F", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "R16", "R32", "R64", "R128", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "QF", "R16", "R32", "R64", "R128", "R128", "R64", "R32", "R16", "QF", "SF", "F", "SF", "QF", "R16", "R32", "GS", "GS", "GS", "GS", "F", "F", "F", "F", "F", "F", "F", "GS", "F", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS"], "type": "dimension"}, {"name": "Round2", "values": ["First round", "Second round", "Third round", "Fourth round", "Quarter-final", "Semi-final", "Final", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Fourth round", "Third round", "Second round", "First round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "First round", "Second round", "Third round", "Fourth round", "Quarter-final", "Semi-final", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Final", "Final", "Final", "Final", "Final", "Final", "Final", "Grand Slam", "Final", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam"], "type": "dimension"}, {"name": "Sets", "values": [3.0, 3.0, 3.0, 4.0, 3.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 2.0, 3.0, 4.0, 3.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Opponent", "values": ["Lars Burgsmuller", "Xavier Malisse", "Richard Gasquet", "Sebastien Grosjean", "David Ferrer", "Roger Federer", "Mariano Puerta", "Roger Federer", "Ivan Ljubicic", "Novak Djokovic", "Lleyton Hewitt", "Paul Henri Mathieu", "Kevin Kim", "Robin Soderling", "Roger Federer", "Novak Djokovic", "Carlos Moya", "Lleyton Hewitt", "Albert Montanes", "Flavio Cipolla", "Juan Martin Del Potro", "Roger Federer", "Novak Djokovic", "Nicolas Almagro", "Fernando Verdasco", "Jarkko Nieminen", "Nicolas Devilder", "Thomaz Bellucci", "Lleyton Hewitt", "Teymuraz Gabashvili", "Marcos Daniel", "Robin Soderling", "Jurgen Melzer", "Nicolas Almagro", "Thomaz Bellucci", "Lleyton Hewitt", "Horacio Zeballos", "Gianni Mina", "Roger Federer", "Andy Murray", "Robin Soderling", "Ivan Ljubicic", "Antonio Veic", "Pablo Andujar", "John Isner", "Novak Djokovic", "David Ferrer", "Nicolas Almagro", "Juan Monaco", "Eduardo Schwank", "Denis Istomin", "Simone Bolelli", "David Ferrer", "Novak Djokovic", "Stan Wawrinka", "Kei Nishikori", "Fabio Fognini", "Martin Klizan", "Daniel Brands", "Novak Djokovic", "Andy Murray", "David Ferrer", "Dusan Lajovic", "Leonardo Mayer", "Dominic Thiem", "Robby Ginepri", "Jack Sock", "Andrey Kuznetsov", "Nicolas Almagro", "Quentin Halys", "Facundo Bagnis", "Samuel Groth", "Stan Wawrinka", "Dominic Thiem", "Pablo Carreno Busta", "Roberto Bautista Agut", "Nikoloz Basilashvili", "Robin Haase", "Benoit Paire", "Dominic Thiem", "Juan Martin Del Potro", "Diego Sebastian Schwartzman", "Maximilian Marterer", "Richard Gasquet", "Guido Pella", "Simone Bolelli", "Dominic Thiem", "Roger Federer", "Kei Nishikori", "Juan Ignacio Londero", "David Goffin", "Yannick Maden", "Yannick Hanfmann", "Novak Djokovic", "Diego Sebastian Schwartzman", "Jannik Sinner", "Sebastian Korda", "Stefano Travaglia", "Mackenzie Mcdonald", "Egor Gerasimov", "Diego Sebastian Schwartzman", "Jannik Sinner", "Cameron Norrie", "Richard Gasquet", "Alexei Popyrin", "Jordan Thompson", "Corentin Moutet", "Botic van de Zandschulp", "Felix Auger-Aliassime", "Novak Djokovic", "Alexander Zverev", "Casper Ruud", "Novak Djokovic", "Novak Djokovic", "Robin Soderling", "Marcel Granollers", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody"], "type": "dimension"}, {"name": "Won", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], "type": "measure"}, {"name": "Lost", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Bagel", "values": [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Final", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Count", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 9.0, 14.0, 5.0, 8.0, 7.0, 10.0, 7.0, 12.0, 10.0, 10.0, 8.0, 6.0, 11.0, 6.0, 5.0, 5.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 3.0, 3.0, 2.0, 1.0, 1.0, 4.0, 4.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 3.0, 3.0, 2.0, 2.0, 2.0, 1.0], "type": "measure"}, {"name": "Novak", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Roger", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Tournament", "values": ["Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Australian Open", "Roland Garros", "US Open", "Wimbledon", "Cincinnati", "Basel", "Buenos Aires", "Barcelona", "Halle", "Rome", "Dubai", "Australian Open", "Monte Carlo", "Roland Garros", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon"], "type": "dimension"}, {"name": "Player", "values": ["Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Djokovic", "Nadal", "Connors", "Federer", "Federer", "Federer", "Vilas", "Nadal", "Federer", "Nadal", "Federer", "Federer", "Nadal", "Borg", "Sampras", "Federer", "Sampras", "Djokovic", "Borg", "Agassi", "Wilander", "Sampras", "Nadal", "Lendl", "Edberg", "Becker", "Connors", "Wilander", "Lendl", "Djokovic", "Federer", "Agassi", "Nadal", "McEnroe", "Lendl", "Djokovic", "Edberg", "Agassi", "Wilander", "Becker", "McEnroe", "Becker", "Nadal", "Edberg", "Connors", "Agassi"], "type": "dimension"}, {"name": "Level", "values": ["Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Australian Open", "Roland Garros", "US Open", "Wimbledon", "Masters", "ATP 500", "ATP 250", "ATP 500", "ATP 500", "Masters", "ATP 500", "Australian Open", "Masters", "Roland Garros", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon"], "type": "dimension"}, {"name": "3SetWin", "values": [1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Straightwin", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Order_GS", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "1", "6", "3", "0", "0", "0", "0", "0", "0", "0", "5", "0", "5", "6", "6", "4", "5", "6", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"], "type": "dimension"}, {"name": "Order_all", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "5", "1", "0", "6", "7", "4", "7", "2", "4", "4", "6", "8", "3", "8", "0", "0", "7", "8", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"], "type": "dimension"}, {"name": "Total_GS", "values": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Federer - 20", "", "", "", "", "", "", "", "", "", "", "", "", "Sampras - 14", "Djokovic - 20", "Borg - 11", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Lendl - 8", "", "", "", "Wilander - 7", "", "McEnroe - 7", "Becker - 6", "Nadal - 22", "Edberg - 6", "Connors - 8", "Agassi - 8"], "type": "dimension"}, {"name": "Top", "values": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], "type": "dimension"}]}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="abdba666-93c1-4ad9-b92b-4ff120c40aeb" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('abdba666-93c1-4ad9-b92b-4ff120c40aeb');
-window.ipyvizzu.animate(element, '361bbca', '3f53ea3', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year != 'Total') }}, "config": {"x": "Year", "y": "Round2", "color": {"set": "Result_Num", "range": {"min": -1, "max": 1}}, "size": null, "orientation": "horizontal", "geometry": "rectangle", "title": "Partidos de Rafael Nadal en Roland Garros", "legend": "size"}, "style": {"title": {"paddingTop": 50, "paddingBottom": 0}, "plot": {"marker": {"borderWidth": 3, "borderOpacity": 0, "colorPalette": "#1EB55FFF #AD0000FF #AEAEAEFF", "colorGradient": "#AEAEAEFF 0.000000, #AD0000FF 0.500000, #1EB55FFF 1.000000"}, "paddingLeft": 20, "paddingBottom": "3.5em", "paddingTop": "2.5em", "xAxis": {"interlacing": {"color": "#ffffff00"}}, "yAxis": {"label": {"fontSize": "120%"}}}, "logo": {"width": 100}}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="736bb009-194c-4865-958c-9e0960401884" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('736bb009-194c-4865-958c-9e0960401884');
-window.ipyvizzu.animate(element, '361bbca', '53935a2', 'end', false, lib => { return {"config": {"lightness": "Won", "title": "Gan\u00f3 112 de 116 (96.5%)"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="b87f2e7b-6a5e-4471-9562-af63f63b70aa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('b87f2e7b-6a5e-4471-9562-af63f63b70aa');
-window.ipyvizzu.animate(element, '361bbca', '782bf7e', 'end', false, lib => { return {"config": {"lightness": "Lost", "title": "Perdi\u00f3 3 veces, se retir\u00f3 una vez"}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ba1fe047-b8b9-4ef7-a70f-ffb065c40704" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ba1fe047-b8b9-4ef7-a70f-ffb065c40704');
-window.ipyvizzu.animate(element, '361bbca', 'dbc9434', 'end', false, lib => { return {"config": {"lightness": null, "title": ""}, "style": {"plot": {"marker": {"maxLightness": null, "minLightness": null}}}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1badbc2f-225e-4c79-8fe1-510b9e692ba5" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1badbc2f-225e-4c79-8fe1-510b9e692ba5');
-window.ipyvizzu.animate(element, '361bbca', '108ab76', 'end', false, lib => { return {"config": {"lightness": "3SetWin", "title": "90 victorias (80%) en sets corridos"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="9be3a228-4d54-4905-b46a-035e3cc780d5" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('9be3a228-4d54-4905-b46a-035e3cc780d5');
-window.ipyvizzu.animate(element, '361bbca', '70cc2f8', 'end', false, lib => { return {"config": {"lightness": "Straightwin", "title": "Gan\u00f3 4 t\u00edtulos sin perder sets"}} }, {"delay": 3});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="8045075f-ee25-4e60-9f08-9d2460b0fcea" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('8045075f-ee25-4e60-9f08-9d2460b0fcea');
-window.ipyvizzu.animate(element, '361bbca', 'fa31674', 'end', false, lib => { return {"config": {"lightness": null, "title": ""}, "style": {"plot": {"marker": {"maxLightness": null, "minLightness": null}}}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7209f297-a0c5-425f-b4cb-e5f59d1ef9c5" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7209f297-a0c5-425f-b4cb-e5f59d1ef9c5');
-window.ipyvizzu.animate(element, '361bbca', 'd7a5bf7', 'end', false, lib => { return {"config": {"lightness": "Novak", "title": "Jug\u00f3 m\u00e1s veces contra Djokovic - 10 partidos"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="e9af4015-3787-4aa7-9365-d4cabaede975" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('e9af4015-3787-4aa7-9365-d4cabaede975');
-window.ipyvizzu.animate(element, '361bbca', '5222692', 'end', false, lib => { return {"config": {"lightness": "Roger", "title": "Segundo en esta lista es Federer - con 6 encuentros"}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="ea2392c1-2d1b-4804-9d2c-cc0cd5aad0d8" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('ea2392c1-2d1b-4804-9d2c-cc0cd5aad0d8');
-window.ipyvizzu.animate(element, '361bbca', 'adf49a3', 'end', false, lib => { return {"config": {"lightness": "Final", "title": "Rafa gan\u00f3 sus 14 finales"}} }, {"delay": 4});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="2b210136-7bdc-4a41-a6ec-e32eee24089a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('2b210136-7bdc-4a41-a6ec-e32eee24089a');
-window.ipyvizzu.animate(element, '361bbca', '72d8764', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year != 'Total' && record.Round == 'F') }}, "config": {"y": {"set": "Round2", "range": {"max": 1, "min": -5}}, "x": "Count", "lightness": null, "noop": "Year", "label": null, "title": ""}, "style": {"plot": {"marker": {"borderWidth": 0, "colorPalette": "#C6652A #CDA02E #47B0FF #329564 #5C88F2 #91A9B5 #DBC4B1", "maxLightness": null, "minLightness": null, "label": {"position": "center", "format": "dimensionsFirst"}}, "xAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00"}, "interlacing": {"color": "#ffffff00"}}, "yAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00", "fontSize": null}}}}} }, {"delay": 3});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="7e5cabfb-dd3d-4f66-b53c-8cede618fa8a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('7e5cabfb-dd3d-4f66-b53c-8cede618fa8a');
-window.ipyvizzu.animate(element, '361bbca', 'e2c0ee7', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Tournament == "Roland Garros" && record.Player == "Nadal") }}, "config": {"noop": ["Level", "Round2"], "label": ["Player", "Tournament", "Count"], "y": {"set": ["Player", "Tournament"]}}} }, {"duration": 0});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="1728bfda-9601-48cb-9df6-b27f838813aa" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('1728bfda-9601-48cb-9df6-b27f838813aa');
-window.ipyvizzu.animate(element, '361bbca', '147f3bf', 'end', false, lib => { return {"config": {"noop": "Level"}} }, {"duration": 0});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="20db9ae5-e9fb-4987-8e9a-7b9c4d95b693" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('20db9ae5-e9fb-4987-8e9a-7b9c4d95b693');
-window.ipyvizzu.animate(element, '361bbca', '99c3d56', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == 'Total' && record.Round == 'GS' && record.Top == '1') }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": null, "min": null}}, "title": "Rafa gan\u00f3 el mismo t\u00edtulo de Grand Slam varias veces", "color": "Level", "legend": "color", "noop": null, "sort": "byValue"}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="03a48517-7095-4d03-b0a2-b6b7d58dd77d" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('03a48517-7095-4d03-b0a2-b6b7d58dd77d');
-window.ipyvizzu.animate(element, '361bbca', '874baef', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Top == "1") }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": 19, "min": 7}}, "x": ["Count"], "title": "Ganando el mismo t\u00edtulo ATP - Rafa es 1ro, 2do, 3ro y 4to!"}} }, {"delay": 5});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="858ae2c7-2648-4a0c-97b0-536b4b82ab96" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('858ae2c7-2648-4a0c-97b0-536b4b82ab96');
-window.ipyvizzu.animate(element, '361bbca', '2b438be', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Round == "GS" && record.Top == "1") }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": null, "min": null}}, "x": ["Count"], "title": "", "color": "Level"}} }, {"delay": 5});
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="f0493cc8-ce1c-43d7-9c30-6fe67376c3b9" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('f0493cc8-ce1c-43d7-9c30-6fe67376c3b9');
-window.ipyvizzu.animate(element, '361bbca', '23f8dd6', 'end', false, lib => { return {"config": {"x": ["Count", "Total_GS"], "label": "Player"}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="807790d8-7e1f-441d-84e4-71f1839ba018" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('807790d8-7e1f-441d-84e4-71f1839ba018');
-window.ipyvizzu.animate(element, '361bbca', 'f8c2cf8', 'end', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Round == "GS") }}, "config": {"y": {"set": ["Player"], "range": {"max": null, "min": null}}, "x": ["Count", "Tournament", "Level", "Total_GS"], "title": "Rafa tambi\u00e9n lidera en el n\u00famero total de Grand Slams ganados"}} }, undefined);
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-<div id="e79124e2-4f31-428d-9b77-d7e74c96547c" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
-<script type="text/javascript">
-var element = document.getElementById('e79124e2-4f31-428d-9b77-d7e74c96547c');
-window.ipyvizzu.animate(element, '361bbca', '2c9d966', 'end', false, lib => { return {"config": {"label": ["Total_GS"]}, "style": {"plot": {"marker": {"label": {"position": "right", "filter": "color(#666666FF)"}}}}} }, undefined);
+window.ipyvizzu.createChart(element, '0e14411', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '640px', '360px');
+window.ipyvizzu.animate(element, '0e14411', '450bda8', 'manual', false, lib => { return {"data": {"series": [{"name": "Year", "values": ["2005", "2005", "2005", "2005", "2005", "2005", "2005", "2006", "2006", "2006", "2006", "2006", "2006", "2006", "2007", "2007", "2007", "2007", "2007", "2007", "2007", "2008", "2008", "2008", "2008", "2008", "2008", "2008", "2009", "2009", "2009", "2010", "2010", "2010", "2010", "2010", "2010", "2010", "2011", "2011", "2011", "2011", "2011", "2011", "2011", "2012", "2012", "2012", "2012", "2012", "2012", "2012", "2013", "2013", "2013", "2013", "2013", "2013", "2013", "2014", "2014", "2014", "2014", "2014", "2014", "2014", "2015", "2015", "2015", "2015", "2016", "2016", "2017", "2017", "2017", "2017", "2017", "2017", "2017", "2018", "2018", "2018", "2018", "2018", "2018", "2018", "2019", "2019", "2019", "2019", "2019", "2019", "2019", "2020", "2020", "2020", "2020", "2020", "2020", "2020", "2021", "2021", "2021", "2021", "2021", "2022", "2022", "2022", "2022", "2022", "2022", "2022", "2021", "2015", "2009", "2016", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total", "Total"], "type": "dimension"}, {"name": "Result", "values": ["Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Lost", "Lost", "Lost", "Retired", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won", "Won"], "type": "dimension"}, {"name": "Result_Num", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], "type": "measure"}, {"name": "Round", "values": ["R128", "R64", "R32", "R16", "QF", "SF", "F", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "R16", "R32", "R64", "R128", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "F", "SF", "QF", "R16", "R32", "R64", "R128", "QF", "R16", "R32", "R64", "R128", "R128", "R64", "R32", "R16", "QF", "SF", "F", "SF", "QF", "R16", "R32", "GS", "GS", "GS", "GS", "F", "F", "F", "F", "F", "F", "F", "GS", "F", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS", "GS"], "type": "dimension"}, {"name": "Round2", "values": ["First round", "Second round", "Third round", "Fourth round", "Quarter-final", "Semi-final", "Final", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Fourth round", "Third round", "Second round", "First round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "Quarter-final", "Fourth round", "Third round", "Second round", "First round", "First round", "Second round", "Third round", "Fourth round", "Quarter-final", "Semi-final", "Final", "Semi-final", "Quarter-final", "Fourth round", "Third round", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Final", "Final", "Final", "Final", "Final", "Final", "Final", "Grand Slam", "Final", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam", "Grand Slam"], "type": "dimension"}, {"name": "Sets", "values": [3.0, 3.0, 3.0, 4.0, 3.0, 4.0, 4.0, 4.0, 3.0, 2.0, 4.0, 4.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 5.0, 4.0, 2.0, 3.0, 4.0, 3.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Opponent", "values": ["Lars Burgsmuller", "Xavier Malisse", "Richard Gasquet", "Sebastien Grosjean", "David Ferrer", "Roger Federer", "Mariano Puerta", "Roger Federer", "Ivan Ljubicic", "Novak Djokovic", "Lleyton Hewitt", "Paul Henri Mathieu", "Kevin Kim", "Robin Soderling", "Roger Federer", "Novak Djokovic", "Carlos Moya", "Lleyton Hewitt", "Albert Montanes", "Flavio Cipolla", "Juan Martin Del Potro", "Roger Federer", "Novak Djokovic", "Nicolas Almagro", "Fernando Verdasco", "Jarkko Nieminen", "Nicolas Devilder", "Thomaz Bellucci", "Lleyton Hewitt", "Teymuraz Gabashvili", "Marcos Daniel", "Robin Soderling", "Jurgen Melzer", "Nicolas Almagro", "Thomaz Bellucci", "Lleyton Hewitt", "Horacio Zeballos", "Gianni Mina", "Roger Federer", "Andy Murray", "Robin Soderling", "Ivan Ljubicic", "Antonio Veic", "Pablo Andujar", "John Isner", "Novak Djokovic", "David Ferrer", "Nicolas Almagro", "Juan Monaco", "Eduardo Schwank", "Denis Istomin", "Simone Bolelli", "David Ferrer", "Novak Djokovic", "Stan Wawrinka", "Kei Nishikori", "Fabio Fognini", "Martin Klizan", "Daniel Brands", "Novak Djokovic", "Andy Murray", "David Ferrer", "Dusan Lajovic", "Leonardo Mayer", "Dominic Thiem", "Robby Ginepri", "Jack Sock", "Andrey Kuznetsov", "Nicolas Almagro", "Quentin Halys", "Facundo Bagnis", "Samuel Groth", "Stan Wawrinka", "Dominic Thiem", "Pablo Carreno Busta", "Roberto Bautista Agut", "Nikoloz Basilashvili", "Robin Haase", "Benoit Paire", "Dominic Thiem", "Juan Martin Del Potro", "Diego Sebastian Schwartzman", "Maximilian Marterer", "Richard Gasquet", "Guido Pella", "Simone Bolelli", "Dominic Thiem", "Roger Federer", "Kei Nishikori", "Juan Ignacio Londero", "David Goffin", "Yannick Maden", "Yannick Hanfmann", "Novak Djokovic", "Diego Sebastian Schwartzman", "Jannik Sinner", "Sebastian Korda", "Stefano Travaglia", "Mackenzie Mcdonald", "Egor Gerasimov", "Diego Sebastian Schwartzman", "Jannik Sinner", "Cameron Norrie", "Richard Gasquet", "Alexei Popyrin", "Jordan Thompson", "Corentin Moutet", "Botic van de Zandschulp", "Felix Auger-Aliassime", "Novak Djokovic", "Alexander Zverev", "Casper Ruud", "Novak Djokovic", "Novak Djokovic", "Robin Soderling", "Marcel Granollers", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody", "Nobody"], "type": "dimension"}, {"name": "Won", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], "type": "measure"}, {"name": "Lost", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Bagel", "values": [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Final", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Count", "values": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 9.0, 14.0, 5.0, 8.0, 7.0, 10.0, 7.0, 12.0, 10.0, 10.0, 8.0, 6.0, 11.0, 6.0, 5.0, 5.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.0, 3.0, 3.0, 2.0, 1.0, 1.0, 4.0, 4.0, 3.0, 3.0, 2.0, 2.0, 1.0, 1.0, 3.0, 3.0, 2.0, 2.0, 2.0, 1.0], "type": "measure"}, {"name": "Novak", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Roger", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Tournament", "values": ["Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Australian Open", "Roland Garros", "US Open", "Wimbledon", "Cincinnati", "Basel", "Buenos Aires", "Barcelona", "Halle", "Rome", "Dubai", "Australian Open", "Monte Carlo", "Roland Garros", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon"], "type": "dimension"}, {"name": "Player", "values": ["Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Nadal", "Djokovic", "Nadal", "Connors", "Federer", "Federer", "Federer", "Vilas", "Nadal", "Federer", "Nadal", "Federer", "Federer", "Nadal", "Borg", "Sampras", "Federer", "Sampras", "Djokovic", "Borg", "Agassi", "Wilander", "Sampras", "Nadal", "Lendl", "Edberg", "Becker", "Connors", "Wilander", "Lendl", "Djokovic", "Federer", "Agassi", "Nadal", "McEnroe", "Lendl", "Djokovic", "Edberg", "Agassi", "Wilander", "Becker", "McEnroe", "Becker", "Nadal", "Edberg", "Connors", "Agassi"], "type": "dimension"}, {"name": "Level", "values": ["Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Australian Open", "Roland Garros", "US Open", "Wimbledon", "Masters", "ATP 500", "ATP 250", "ATP 500", "ATP 500", "Masters", "ATP 500", "Australian Open", "Masters", "Roland Garros", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Australian Open", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "Roland Garros", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "US Open", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon", "Wimbledon"], "type": "dimension"}, {"name": "3SetWin", "values": [1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Straightwin", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "type": "measure"}, {"name": "Order_GS", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "1", "6", "3", "0", "0", "0", "0", "0", "0", "0", "5", "0", "5", "6", "6", "4", "5", "6", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"], "type": "dimension"}, {"name": "Order_all", "values": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "5", "1", "0", "6", "7", "4", "7", "2", "4", "4", "6", "8", "3", "8", "0", "0", "7", "8", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"], "type": "dimension"}, {"name": "Total_GS", "values": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Federer - 20", "", "", "", "", "", "", "", "", "", "", "", "", "Sampras - 14", "Djokovic - 20", "Borg - 11", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Lendl - 8", "", "", "", "Wilander - 7", "", "McEnroe - 7", "Becker - 6", "Nadal - 22", "Edberg - 6", "Connors - 8", "Agassi - 8"], "type": "dimension"}, {"name": "Top", "values": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], "type": "dimension"}]}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', '7776c00', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year != 'Total') }}, "config": {"x": "Year", "y": "Round2", "color": {"set": "Result_Num", "range": {"min": -1, "max": 1}}, "size": null, "orientation": "horizontal", "geometry": "rectangle", "title": "Partidos de Rafael Nadal en Roland Garros", "legend": "size"}, "style": {"title": {"paddingTop": 50, "paddingBottom": 0}, "plot": {"marker": {"borderWidth": 3, "borderOpacity": 0, "colorPalette": "#1EB55FFF #AD0000FF #AEAEAEFF", "colorGradient": "#AEAEAEFF 0.000000, #AD0000FF 0.500000, #1EB55FFF 1.000000"}, "paddingLeft": 20, "paddingBottom": "3.5em", "paddingTop": "2.5em", "xAxis": {"interlacing": {"color": "#ffffff00"}}, "yAxis": {"label": {"fontSize": "120%"}}}, "logo": {"width": 100}}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', 'd301804', 'manual', false, lib => { return {"config": {"lightness": "Won", "title": "Gan\u00f3 112 de 116 (96.5%)"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', '10ce100', 'manual', false, lib => { return {"config": {"lightness": "Lost", "title": "Perdi\u00f3 3 veces, se retir\u00f3 una vez"}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', 'b353c73', 'manual', false, lib => { return {"config": {"lightness": null, "title": ""}, "style": {"plot": {"marker": {"maxLightness": null, "minLightness": null}}}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', '6199d53', 'manual', false, lib => { return {"config": {"lightness": "3SetWin", "title": "90 victorias (80%) en sets corridos"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', '02ce807', 'manual', false, lib => { return {"config": {"lightness": "Straightwin", "title": "Gan\u00f3 4 t\u00edtulos sin perder sets"}} }, {"delay": 3});
+window.ipyvizzu.animate(element, '0e14411', '1c23bf6', 'manual', false, lib => { return {"config": {"lightness": null, "title": ""}, "style": {"plot": {"marker": {"maxLightness": null, "minLightness": null}}}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', '3796f63', 'manual', false, lib => { return {"config": {"lightness": "Novak", "title": "Jug\u00f3 m\u00e1s veces contra Djokovic - 10 partidos"}, "style": {"plot": {"marker": {"maxLightness": 0, "minLightness": 0.8}}}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', '4f684dc', 'manual', false, lib => { return {"config": {"lightness": "Roger", "title": "Segundo en esta lista es Federer - con 6 encuentros"}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', '9d49f0c', 'manual', false, lib => { return {"config": {"lightness": "Final", "title": "Rafa gan\u00f3 sus 14 finales"}} }, {"delay": 4});
+window.ipyvizzu.animate(element, '0e14411', 'dd63d21', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year != 'Total' && record.Round == 'F') }}, "config": {"y": {"set": "Round2", "range": {"max": 1, "min": -5}}, "x": "Count", "lightness": null, "noop": "Year", "label": null, "title": ""}, "style": {"plot": {"marker": {"borderWidth": 0, "colorPalette": "#C6652A #CDA02E #47B0FF #329564 #5C88F2 #91A9B5 #DBC4B1", "maxLightness": null, "minLightness": null, "label": {"position": "center", "format": "dimensionsFirst"}}, "xAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00"}, "interlacing": {"color": "#ffffff00"}}, "yAxis": {"title": {"color": "#ffffff00"}, "label": {"color": "#ffffff00", "fontSize": null}}}}} }, {"delay": 3});
+window.ipyvizzu.animate(element, '0e14411', '96c16ac', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Tournament == "Roland Garros" && record.Player == "Nadal") }}, "config": {"noop": ["Level", "Round2"], "label": ["Player", "Tournament", "Count"], "y": {"set": ["Player", "Tournament"]}}} }, {"duration": 0});
+window.ipyvizzu.animate(element, '0e14411', '53dc8e3', 'manual', false, lib => { return {"config": {"noop": "Level"}} }, {"duration": 0});
+window.ipyvizzu.animate(element, '0e14411', '6fda5f5', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == 'Total' && record.Round == 'GS' && record.Top == '1') }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": null, "min": null}}, "title": "Rafa gan\u00f3 el mismo t\u00edtulo de Grand Slam varias veces", "color": "Level", "legend": "color", "noop": null, "sort": "byValue"}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', 'f8cade1', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Top == "1") }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": 19, "min": 7}}, "x": ["Count"], "title": "Ganando el mismo t\u00edtulo ATP - Rafa es 1ro, 2do, 3ro y 4to!"}} }, {"delay": 5});
+window.ipyvizzu.animate(element, '0e14411', '568d2b3', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Round == "GS" && record.Top == "1") }}, "config": {"y": {"set": ["Player", "Tournament", "Level"], "range": {"max": null, "min": null}}, "x": ["Count"], "title": "", "color": "Level"}} }, {"delay": 5});
+window.ipyvizzu.animate(element, '0e14411', 'f2d9b6b', 'manual', false, lib => { return {"config": {"x": ["Count", "Total_GS"], "label": "Player"}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', 'a6bf06d', 'manual', false, lib => { return {"data": {"filter": record => { return (record.Year == "Total" && record.Round == "GS") }}, "config": {"y": {"set": ["Player"], "range": {"max": null, "min": null}}, "x": ["Count", "Tournament", "Level", "Total_GS"], "title": "Rafa tambi\u00e9n lidera en el n\u00famero total de Grand Slams ganados"}} }, undefined);
+window.ipyvizzu.animate(element, '0e14411', 'e980e4f', 'manual', false, lib => { return {"config": {"label": ["Total_GS"]}, "style": {"plot": {"marker": {"label": {"position": "right", "filter": "color(#666666FF)"}}}}} }, undefined);
 </script>
 </div>
 
