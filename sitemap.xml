@@ -11,12 +11,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/Vizzu-Examples/demo/</loc>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/installation/</loc>
          <lastmod>2023-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/Vizzu-Examples/installation/</loc>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/basic/</loc>
+         <lastmod>2023-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/music/</loc>
+         <lastmod>2023-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/musicformats/</loc>
+         <lastmod>2023-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/nadal/</loc>
+         <lastmod>2023-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/sales/</loc>
+         <lastmod>2023-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/fralfaro/Vizzu-Examples/examples/titanic/</loc>
          <lastmod>2023-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
