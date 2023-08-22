@@ -1532,8 +1532,8 @@ Licensed under the Apache License, Version 2.0.
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">()</span>  <span class="c1"># Creamos un objeto Data para manejar los datos</span>
 <span class="n">data</span><span class="o">.</span><span class="n">add_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>  <span class="c1"># Agregamos el DataFrame al objeto Data</span>
 
-<span class="c1"># Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)</span>
-<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;640px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;360px&quot;</span><span class="p">,</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">MANUAL</span><span class="p">)</span>
+<span class="c1"># Crear un objeto Chart con el ancho y el alto deseados </span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">Chart</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;640px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;360px&quot;</span><span class="p">,</span><span class="n">display</span><span class="o">=</span><span class="n">DisplayTarget</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
 
 <span class="n">chart</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c1"># Animamos la gráfica utilizando los datos</span>
 
@@ -1595,9 +1595,6 @@ Licensed under the Apache License, Version 2.0.
 
 <span class="c1"># Animación y configuración para cambiar al sistema de coordenadas polar</span>
 <span class="n">chart</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="n">Config</span><span class="p">({</span><span class="s2">&quot;coordSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;polar&quot;</span><span class="p">,</span> <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;byValue&quot;</span><span class="p">}),</span> <span class="n">delay</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Finalmente, muestra la gráfica utilizando el método show()</span>
-<span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">import pandas as pd  
 from ipyvizzu import Chart, Data, Config, Style, DisplayTarget 
@@ -1610,8 +1607,8 @@ df = pd.read_csv(
 data = Data()  # Creamos un objeto Data para manejar los datos
 data.add_df(df)  # Agregamos el DataFrame al objeto Data
 
-# Crear un objeto Chart con el ancho y el alto deseados (display=DisplayTarget.MANUAL)
-chart = Chart(width="640px", height="360px",display=DisplayTarget.MANUAL)
+# Crear un objeto Chart con el ancho y el alto deseados 
+chart = Chart(width="640px", height="360px",display=DisplayTarget.END)
 
 chart.animate(data)  # Animamos la gráfica utilizando los datos
 
@@ -1672,10 +1669,7 @@ chart.animate(
 chart.animate(Config({"x": "Revenue [$]", "y": "Product"}))
 
 # Animación y configuración para cambiar al sistema de coordenadas polar
-chart.animate(Config({"coordSystem": "polar", "sort": "byValue"}), delay=1)
-
-# Finalmente, muestra la gráfica utilizando el método show()
-chart.show()</div>
+chart.animate(Config({"coordSystem": "polar", "sort": "byValue"}), delay=1)</div>
     
         </div>
     </div>
@@ -1699,9 +1693,9 @@ chart.show()</div>
 
 
 
-<div id="afe0a228-b2ef-4fc6-acec-beb92e420cbc" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<div id="60c5c105-fa07-43d0-980e-4484bc47a53c" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
 <script type="text/javascript">
-var element = document.getElementById('afe0a228-b2ef-4fc6-acec-beb92e420cbc');
+var element = document.getElementById('60c5c105-fa07-43d0-980e-4484bc47a53c');
 class IpyVizzu {
   static version = "0.16.1";
   static analytics = undefined;
@@ -1916,17 +1910,204 @@ if (IpyVizzu.version !== window.IpyVizzu?.version) {
   window.ipyvizzu = new window.IpyVizzu();
 }
 
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="1d263c87-6b0d-4fd2-b0ef-521e5e6dd7f1" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('1d263c87-6b0d-4fd2-b0ef-521e5e6dd7f1');
 if (window.IpyVizzu) window.IpyVizzu.changeAnalyticsTo(true);
-window.ipyvizzu.createChart(element, 'd7cb7fd', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '640px', '360px');
-window.ipyvizzu.animate(element, 'd7cb7fd', '609c6a7', 'manual', false, lib => { return {"data": {"series": [{"name": "Region", "values": ["North", "North", "North", "North", "South", "South", "South", "South", "East", "East", "East", "East", "West", "West", "West", "West"], "type": "dimension"}, {"name": "Product", "values": ["Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories"], "type": "dimension"}, {"name": "Sales", "values": [4500.0, 7400.0, 2350.0, 8200.0, 3850.0, 6200.0, 3100.0, 10500.0, 2300.0, 3800.0, 7250.0, 5600.0, 4100.0, 6800.0, 3650.0, 7600.0], "type": "measure"}, {"name": "Revenue [$]", "values": [202500.0, 296000.0, 70500.0, 147600.0, 173250.0, 248000.0, 93000.0, 189000.0, 103500.0, 152000.0, 217500.0, 100800.0, 184500.0, 272000.0, 109500.0, 136800.0], "type": "measure"}]}} }, undefined);
-window.ipyvizzu.animate(element, 'd7cb7fd', 'b8b49a6', 'manual', false, lib => { return {"data": {"filter": record => { return (record['Product'] == 'Shoes') }}, "config": {"x": "Region", "y": ["Sales", "Product"], "label": "Sales", "color": "Product", "title": "Ventas de Zapatos"}} }, undefined);
-window.ipyvizzu.animate(element, 'd7cb7fd', '74f2185', 'manual', false, lib => { return {"data": {"filter": record => { return (record['Product'] == 'Shoes' || record['Product'] == 'Handbags') }}, "config": {"title": "Ventas de Zapatos y Bolsos"}} }, {"delay": 1});
-window.ipyvizzu.animate(element, 'd7cb7fd', '010136e', 'manual', false, lib => { return {"data": {"filter": record => { return (record['Product'] != 'Accessories') }}, "config": {"title": "Ventas de Zapatos, Bolsos y Guantes"}} }, {"delay": 1});
-window.ipyvizzu.animate(element, 'd7cb7fd', '0f5ee9d', 'manual', false, lib => { return {"data": {"filter": null}, "config": {"title": "Ventas de Todos los Productos"}} }, {"delay": 1});
-window.ipyvizzu.animate(element, 'd7cb7fd', 'c230c4d', 'manual', false, lib => { return {"config": {"y": ["Revenue [$]", "Product"], "label": "Revenue [$]", "title": "Ingresos de Todos los Productos"}} }, {"delay": 1});
-window.ipyvizzu.animate(element, 'd7cb7fd', '5aabf34', 'manual', false, lib => { return {"config": {"x": ["Region", "Revenue [$]"], "y": "Product"}} }, {"delay": 2});
-window.ipyvizzu.animate(element, 'd7cb7fd', 'c40888f', 'manual', false, lib => { return {"config": {"x": "Revenue [$]", "y": "Product"}} }, undefined);
-window.ipyvizzu.animate(element, 'd7cb7fd', 'f9719af', 'manual', false, lib => { return {"config": {"coordSystem": "polar", "sort": "byValue"}} }, {"delay": 1});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="cb63b516-162b-4a9b-b5ae-ac9a23147d27" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('cb63b516-162b-4a9b-b5ae-ac9a23147d27');
+window.ipyvizzu.createChart(element, '3cebd5e', 'https://cdn.jsdelivr.net/npm/vizzu@0.8/dist/vizzu.min.js', '640px', '360px');
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="c0633836-d2c9-4568-b0ff-f22ecb50a0e4" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('c0633836-d2c9-4568-b0ff-f22ecb50a0e4');
+window.ipyvizzu.animate(element, '3cebd5e', '3c35832', 'end', false, lib => { return {"data": {"series": [{"name": "Region", "values": ["North", "North", "North", "North", "South", "South", "South", "South", "East", "East", "East", "East", "West", "West", "West", "West"], "type": "dimension"}, {"name": "Product", "values": ["Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories", "Shoes", "Handbags", "Gloves", "Accessories"], "type": "dimension"}, {"name": "Sales", "values": [4500.0, 7400.0, 2350.0, 8200.0, 3850.0, 6200.0, 3100.0, 10500.0, 2300.0, 3800.0, 7250.0, 5600.0, 4100.0, 6800.0, 3650.0, 7600.0], "type": "measure"}, {"name": "Revenue [$]", "values": [202500.0, 296000.0, 70500.0, 147600.0, 173250.0, 248000.0, 93000.0, 189000.0, 103500.0, 152000.0, 217500.0, 100800.0, 184500.0, 272000.0, 109500.0, 136800.0], "type": "measure"}]}} }, undefined);
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="87cb5cad-b554-446d-984f-80b62cbd436a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('87cb5cad-b554-446d-984f-80b62cbd436a');
+window.ipyvizzu.animate(element, '3cebd5e', 'f7b81c2', 'end', false, lib => { return {"data": {"filter": record => { return (record['Product'] == 'Shoes') }}, "config": {"x": "Region", "y": ["Sales", "Product"], "label": "Sales", "color": "Product", "title": "Ventas de Zapatos"}} }, undefined);
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="4a7ec54f-1fcd-46d3-8bf2-639dc55cbba8" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('4a7ec54f-1fcd-46d3-8bf2-639dc55cbba8');
+window.ipyvizzu.animate(element, '3cebd5e', 'd8eea0f', 'end', false, lib => { return {"data": {"filter": record => { return (record['Product'] == 'Shoes' || record['Product'] == 'Handbags') }}, "config": {"title": "Ventas de Zapatos y Bolsos"}} }, {"delay": 1});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="f1d40214-5ad1-4e32-b01f-769b62a86c54" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('f1d40214-5ad1-4e32-b01f-769b62a86c54');
+window.ipyvizzu.animate(element, '3cebd5e', '5c87b11', 'end', false, lib => { return {"data": {"filter": record => { return (record['Product'] != 'Accessories') }}, "config": {"title": "Ventas de Zapatos, Bolsos y Guantes"}} }, {"delay": 1});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="a5733bed-ea57-4a22-8931-bafd2490e762" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('a5733bed-ea57-4a22-8931-bafd2490e762');
+window.ipyvizzu.animate(element, '3cebd5e', '5942a82', 'end', false, lib => { return {"data": {"filter": null}, "config": {"title": "Ventas de Todos los Productos"}} }, {"delay": 1});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="6bc149d3-2f50-4d76-8718-ca3a0cc5fcce" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('6bc149d3-2f50-4d76-8718-ca3a0cc5fcce');
+window.ipyvizzu.animate(element, '3cebd5e', '3b86e6e', 'end', false, lib => { return {"config": {"y": ["Revenue [$]", "Product"], "label": "Revenue [$]", "title": "Ingresos de Todos los Productos"}} }, {"delay": 1});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="1395ed51-461e-459f-8c11-70652a0f4876" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('1395ed51-461e-459f-8c11-70652a0f4876');
+window.ipyvizzu.animate(element, '3cebd5e', '9e28669', 'end', false, lib => { return {"config": {"x": ["Region", "Revenue [$]"], "y": "Product"}} }, {"delay": 2});
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="4f3ed12e-d36e-4c0a-ba3a-80a50945059a" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('4f3ed12e-d36e-4c0a-ba3a-80a50945059a');
+window.ipyvizzu.animate(element, '3cebd5e', 'ba0ecfb', 'end', false, lib => { return {"config": {"x": "Revenue [$]", "y": "Product"}} }, undefined);
+</script>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+<div id="7490f325-78ce-43e5-8cc4-ebaea1f0c499" class="jp-RenderedJavaScript jp-OutputArea-output " data-mime-type="application/javascript">
+<script type="text/javascript">
+var element = document.getElementById('7490f325-78ce-43e5-8cc4-ebaea1f0c499');
+window.ipyvizzu.animate(element, '3cebd5e', 'dad402e', 'end', false, lib => { return {"config": {"coordSystem": "polar", "sort": "byValue"}} }, {"delay": 1});
 </script>
 </div>
 
