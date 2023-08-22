@@ -14,4 +14,5 @@ está diseñado para construir historias de datos animadas y exploradores
 interactivos, ya que Vizzu permite mostrar diferentes perspectivas de 
 los datos que los espectadores pueden seguir fácilmente debido a la animación.
 
+> **Nota:** Este repositorio es una adaptación simplificada de la [documentación oficial](https://ipyvizzu.vizzuhq.com/latest/) en español.
 
