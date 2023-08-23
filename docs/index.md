@@ -1,12 +1,8 @@
-[](https://github.com/vizzuhq/ipyvizzu/edit/main/README.md "Editar esta página")
-
-[![Vizzu](https://lib.vizzuhq.com/0.8/readme/infinite-60.gif)](./)
-
-**ipyvizzu** - Crea gráficos animados en Jupyter Notebook y entornos similares con una sintaxis simple en Python
-
-
 ipyvizzu
 ========
+
+<img src="images/vizzu_2.png">
+
 
 Acerca del Proyecto
 -------------------
